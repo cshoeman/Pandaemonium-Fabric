@@ -1,0 +1,17 @@
+# For Gradle
+
+.gradle/
+build/
+out/
+classes/
+
+# For IntelliJ IDEA
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# For Fabric
+
+run/

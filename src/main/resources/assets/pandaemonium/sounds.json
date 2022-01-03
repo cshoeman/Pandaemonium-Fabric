@@ -1,0 +1,8 @@
+{
+  "test_sound": {
+    "subtitle": "subtitles.pandaemonium.test_sound",
+    "sounds": [
+      "pandaemonium:test_sound"
+    ]
+  }
+}
