@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ToolItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -20,6 +22,10 @@ public class Pandaemonium implements ModInitializer {
 	// The testing block
 	public static final Block THE_TESTING_BLOCK = new Block(FabricBlockSettings.of(Material.WOOD).hardness(0.7f).resistance(2000.0f).requiresTool());
 
+	// The Effective Power Pickaxe
+	public static ToolItem EFFECTIVE_POWER_PICKAXE = new CustomPickaxes(EffectivePowerTool.EFFECTIVE_POWER_TOOL, 10, -1.2F, new Item.Settings().group(ItemGroup.TOOLS));
+	/*public static final Item EFFECTIVE_POWER_PICKAXE = new Item(new FabricItemSettings().group(ItemGroup.TOOLS));*/
+
 	// Sound events
 	public static final Identifier TEST_SOUND = new Identifier("pandaemonium:test_sound");
 	public static SoundEvent TEST_SOUND_EVENT = new SoundEvent(TEST_SOUND);
@@ -31,6 +37,9 @@ public class Pandaemonium implements ModInitializer {
 		// Register the testing block
 		Registry.register(Registry.BLOCK, new Identifier("pandaemonium", "the_testing_block"), THE_TESTING_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier("pandaemonium", "the_testing_block"), new BlockItem(THE_TESTING_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
+
+		// Register the Effective Power Pickaxe
+		Registry.register(Registry.ITEM, new Identifier("pandaemonium", "effective_power_pickaxe"), EFFECTIVE_POWER_PICKAXE);
 
 		// Register the test sound
 		Registry.register(Registry.SOUND_EVENT, Pandaemonium.TEST_SOUND, TEST_SOUND_EVENT);
