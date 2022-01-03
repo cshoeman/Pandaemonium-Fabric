@@ -1,6 +1,18 @@
+/*
+
+    Pandaemonium
+    EffectivePowerTool.java
+    The effective. Power tool
+
+    Registers the Effective Power pickaxe.
+
+ */
+
+// TODO: Merge this with ModItems.java once that's figured out
+
 package net.compii.pandaemonium;
 
-import net.minecraft.item.Items;
+import net.compii.pandaemonium.block.ModBlocks;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -35,7 +47,7 @@ public class EffectivePowerTool implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Pandaemonium.THE_TESTING_BLOCK);
+        return Ingredient.ofItems(ModBlocks.THE_TESTING_BLOCK);
     }
 
 
