@@ -1,8 +1,8 @@
 {
-  "test_sound": {
-    "subtitle": "subtitles.pandaemonium.test_sound",
+  "block.the_testing_block.break": {
+    "subtitle": "subtitles.pandaemonium.the_testing_block.break",
     "sounds": [
-      "pandaemonium:test_sound"
+      "pandaemonium:block/the_testing_block/break"
     ]
   }
 }

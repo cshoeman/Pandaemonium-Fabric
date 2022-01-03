@@ -1,4 +1,7 @@
 {
   "block.pandaemonium.the_testing_block": "The Testing Block",
-  "item.pandaemonium.effective_power_pickaxe": "effective. Power"
+  "item.pandaemonium.effective_power_pickaxe": "effective. Power",
+  "itemGroup.pandaemonium.general": "General",
+  "itemGroup.pandaemonium.tools": "Tools",
+  "subtitles.pandaemonium.the_testing_block.break": "Vine boom"
 }

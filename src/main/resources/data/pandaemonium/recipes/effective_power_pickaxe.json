@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    " L ",
+    " L "
+  ],
+  "key": {
+    "T": {
+      "tag": "minecraft:the_testing_block"
+    },
+    "L": {
+      "item": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "pandaemonium:effective_power_pickaxe",
+    "count": 1
+  }
+}

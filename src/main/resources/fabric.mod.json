@@ -6,11 +6,11 @@
   "name": "Pandaemonium",
   "description": "Unleash the chaos.",
   "authors": [
-    "HinduKush69"
+    "cshoeman"
   ],
   "contact": {
     "homepage": "https://pandaemonium.compii.net",
-    "sources": "https://github.com/CompII/Pandaemonium-Fabric"
+    "sources": "https://github.com/cshoeman/Pandaemonium-Fabric"
   },
 
   "license": "MIT",

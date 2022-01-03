@@ -35,7 +35,7 @@ public class EffectivePowerTool implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.NETHER_STAR);
+        return Ingredient.ofItems(Pandaemonium.THE_TESTING_BLOCK);
     }
 
 
