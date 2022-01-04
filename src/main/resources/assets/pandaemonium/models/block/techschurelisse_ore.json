@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "pandaemonium:block/techschurelisse_ore"
+  }
+}

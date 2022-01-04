@@ -1,8 +1,14 @@
 {
   "block.pandaemonium.the_testing_block": "The Testing Block",
+  "block.pandaemonium.raw_techschurelisse_block": "Block of Raw Techschurelisse",
+  "block.pandaemonium.techschurelisse_block": "Techschurelisse Block",
+  "block.pandaemonium.techschurelisse_ore": "Techschurelisse Ore",
+  "item.pandaemonium.raw_techschurelisse": "Raw Techschurelisse",
+  "item.pandaemonium.techschurelisse_ingot": "Techschurelisse Ingot",
   "item.pandaemonium.effective_power_pickaxe": "effective. Power",
-  "subtitles.pandaemonium.the_testing_block.break": "Test sound",
   "itemGroup.pandaemonium.general": "Pandaemonium: General",
   "itemGroup.pandaemonium.tools": "Pandaemonium: Tools",
-  "itemGroup.pandaemonium.misc": "Pandaemonium: Misc"
+  "itemGroup.pandaemonium.misc": "Pandaemonium: Misc",
+  "itemGroup.pandaemonium.materials": "Pandaemonium: Materials",
+  "subtitles.pandaemonium.the_testing_block.break": "Test sound"
 }

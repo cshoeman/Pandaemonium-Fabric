@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "pandaemonium:raw_techschurelisse"
+    }
+  },
+  "result": {
+    "item": "pandaemonium:raw_techschurelisse_block",
+    "count": 1
+  }
+}

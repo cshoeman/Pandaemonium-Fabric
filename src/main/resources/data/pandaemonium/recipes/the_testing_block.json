@@ -2,15 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "WWW",
-    "WRW",
+    "WWW",
     "WWW"
   ],
   "key": {
     "W": {
-      "tag": "minecraft:logs"
-    },
-    "R": {
-      "item": "minecraft:diamond"
+      "item": "pandaemonium:techschurelisse_block"
     }
   },
   "result": {

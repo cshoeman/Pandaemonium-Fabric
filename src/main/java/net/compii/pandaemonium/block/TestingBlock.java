@@ -2,9 +2,7 @@
 
     Pandaemonium
     TestingBlock.java
-    Testing Block testing grounds
-
-    Trying to figure out how to make the testing block make its own sound when broken.
+    The Testing Block
 
  */
 

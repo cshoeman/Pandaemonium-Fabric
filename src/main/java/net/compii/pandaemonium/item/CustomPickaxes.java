@@ -1,4 +1,4 @@
-package net.compii.pandaemonium;
+package net.compii.pandaemonium.item;
 
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;

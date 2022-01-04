@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "pandaemonium:raw_techschurelisse_block"
+    }
+  ],
+  "result": {
+    "item": "pandaemonium:raw_techschurelisse",
+    "count": 9
+  }
+}

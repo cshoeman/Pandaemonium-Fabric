@@ -19,6 +19,7 @@ package net.compii.pandaemonium;
 
 import net.compii.pandaemonium.block.ModBlocks;
 import net.compii.pandaemonium.block.TestingBlock;
+import net.compii.pandaemonium.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -51,7 +52,7 @@ public class Pandaemonium implements ModInitializer {
 	public static final String MODVER = "0.2.0";
 	public static final String MODREPO = "https://github.com/cshoeman/Pandaemonium-Fabric";
 
-	// Invoke the logger (sure hope log4j is patched here lol)
+	// Invoke the logger
 	public static final Logger LOGGER = LogManager.getLogger(MODNAME);
 
 	// Establish Item Group for creative menu
@@ -60,17 +61,21 @@ public class Pandaemonium implements ModInitializer {
 			() -> new ItemStack(ModBlocks.THE_TESTING_BLOCK));
 	public static final ItemGroup ITEM_GROUP_TOOLS = FabricItemGroupBuilder.create(
 					new Identifier(MODID, "tools"))
-			.icon(() -> new ItemStack(Pandaemonium.EFFECTIVE_POWER_PICKAXE))
+			.icon(() -> new ItemStack(ModItems.EFFECTIVE_POWER_PICKAXE))
 			.build();
 	public static final ItemGroup ITEM_GROUP_MISC = FabricItemGroupBuilder.create(
 					new Identifier(MODID, "misc"))
 			.icon(() -> new ItemStack(Blocks.BEDROCK))
 			.build();
+	public static final ItemGroup ITEM_GROUP_MATS = FabricItemGroupBuilder.create(
+					new Identifier(MODID, "materials"))
+			.icon(() -> new ItemStack(ModItems.TECHSCHURELISSE_INGOT))
+			.build();
 
 	// The testing block
     // public static final TestingBlock THE_TESTING_BLOCK = new TestingBlock(FabricBlockSettings.of(Material.WOOD).hardness(0.7f).resistance(2000.0f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK));
 	// The Effective Power Pickaxe
-	public static ToolItem EFFECTIVE_POWER_PICKAXE = new CustomPickaxes(EffectivePowerTool.EFFECTIVE_POWER_TOOL, 10, -1.2F, new Item.Settings().group(Pandaemonium.ITEM_GROUP_TOOLS));
+    // public static ToolItem EFFECTIVE_POWER_PICKAXE = new CustomPickaxes(EffectivePowerTool.EFFECTIVE_POWER_TOOL, 10, -1.2F, new Item.Settings().group(Pandaemonium.ITEM_GROUP_TOOLS));
 
 	// Sound events
 	public static final Identifier TEST_SOUND = new Identifier(MODID, "block.the_testing_block.break");
@@ -80,25 +85,24 @@ public class Pandaemonium implements ModInitializer {
 	private static ConfiguredFeature<?, ?> OVERWORLD_TESTING_ORE_CONFIGURED_FEATURE = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-					ModBlocks.THE_TESTING_BLOCK.getDefaultState(),
-					32)); // Setting vein size to 32 for testing
+					ModBlocks.TECHSCHURELISSE_ORE.getDefaultState(),
+					9)); // Setting vein size to 32 for testing
 	public static PlacedFeature OVERWORLD_TESTING_ORE_PLACED_FEATURE = OVERWORLD_TESTING_ORE_CONFIGURED_FEATURE.withPlacement(
-			CountPlacementModifier.of(10), // How many veins to place in each chunk
+			CountPlacementModifier.of(20), // How many veins to place in each chunk
 			SquarePlacementModifier.of(), // Horizontal spreading
-			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(127))); // Ore placement height
+			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(66))); // Ore placement height
 
 	@Override
 	public void onInitialize() {
-		// Main stuff
-		LOGGER.info("Loading ", MODNAME, " v", MODVER);
-		LOGGER.info(MODREPO);
 
-		// Register the testing block
-		// Registry.register(Registry.BLOCK, new Identifier(MODID, "the_testing_block"), THE_TESTING_BLOCK);
-		// Registry.register(Registry.ITEM, new Identifier(MODID, "the_testing_block"), new BlockItem(THE_TESTING_BLOCK, new FabricItemSettings().group(Pandaemonium.ITEM_GROUP_GENERAL)));
+		// Log that the mod is starting to initialize
+		LOGGER.info(Messages.Initializing_Begin);
+		LOGGER.info(Messages.Initializing_ModRepo);
+		LOGGER.info(Messages.Initializing_IfErrors);
 
-		// Register the Effective Power Pickaxe
-		Registry.register(Registry.ITEM, new Identifier(MODID, "effective_power_pickaxe"), EFFECTIVE_POWER_PICKAXE);
+		// Invoke all classes and register everything
+		ModBlocks.register();
+		ModItems.register();
 
 		// Register the test sound
 		Registry.register(Registry.SOUND_EVENT, Pandaemonium.TEST_SOUND, TEST_SOUND_EVENT);
@@ -112,6 +116,7 @@ public class Pandaemonium implements ModInitializer {
 				RegistryKey.of(Registry.PLACED_FEATURE_KEY,
 						new Identifier(MODID, "overworld_testing_ore")));
 
-		LOGGER.info("Loading complete! Hopefully no errors :D");
+		// Log that initialization is complete
+		LOGGER.info(Messages.Initializing_Complete);
 	}
 }

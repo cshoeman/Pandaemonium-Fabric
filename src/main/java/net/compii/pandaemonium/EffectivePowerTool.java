@@ -4,11 +4,7 @@
     EffectivePowerTool.java
     The effective. Power tool
 
-    Registers the Effective Power pickaxe.
-
  */
-
-// TODO: Merge this with ModItems.java once that's figured out
 
 package net.compii.pandaemonium;
 
