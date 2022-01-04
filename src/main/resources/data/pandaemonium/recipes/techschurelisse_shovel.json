@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "TTT",
+    " T ",
     " L ",
     " L "
   ],
   "key": {
     "T": {
-      "item": "pandaemonium:the_testing_block"
+      "item": "pandaemonium:techschurelisse_ingot"
     },
     "L": {
-      "item": "minecraft:blaze_rod"
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "pandaemonium:effective_power_pickaxe",
+    "item": "pandaemonium:techschurelisse_shovel",
     "count": 1
   }
 }

@@ -1,0 +1,37 @@
+{
+  "parent": "pandaemonium:root",
+  "display": {
+    "icon": {
+      "item": "pandaemonium:raw_techschurelisse"
+    },
+    "title": {
+      "translate": "advancements.pandaemonium.obtain_techschurelisse.title"
+    },
+    "description": {
+      "translate": "advancements.pandaemonium.obtain_techschurelisse.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "techschurelisse": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pandaemonium:raw_techschurelisse"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "techschurelisse"
+    ]
+  ]
+}

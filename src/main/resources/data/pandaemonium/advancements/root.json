@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Pandaemonium"
+    },
+    "description": {
+      "text": "Unleash the chaos."
+    },
+    "icon": {
+      "item": "pandaemonium:the_testing_block"
+    },
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "pandaemonium:textures/block/techschurelisse_ore.png"
+  },
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

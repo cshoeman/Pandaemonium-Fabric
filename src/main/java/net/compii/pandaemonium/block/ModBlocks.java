@@ -18,58 +18,61 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.compii.pandaemonium.Pandaemonium;
 
 public class ModBlocks {
 
     // The Testing Block
-    public static final Block THE_TESTING_BLOCK = registerNewBlock("the_testing_block", new TestingBlock(FabricBlockSettings.of(Material.WOOD)
-            .hardness(0.7f).
+    public static final Block THE_TESTING_BLOCK = registerNewBlock("the_testing_block", Rarity.EPIC, new TestingBlock(FabricBlockSettings.of(Material.WOOD)
+            .hardness(5.5f).
             resistance(2000.0f).
             requiresTool().
             sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             Pandaemonium.ITEM_GROUP_GENERAL);
 
     // Techschurelisse Ore
-    public static final Block TECHSCHURELISSE_ORE = registerNewBlock("techschurelisse_ore", new TestingBlock(FabricBlockSettings.of(Material.STONE)
-                    .hardness(5.5f).
+    public static final Block TECHSCHURELISSE_ORE = registerNewBlock("techschurelisse_ore", Rarity.COMMON, new TestingBlock(FabricBlockSettings.of(Material.STONE)
+                    .hardness(4.5f).
                     resistance(16.0f).
                     requiresTool().
                     sounds(BlockSoundGroup.STONE)),
             Pandaemonium.ITEM_GROUP_GENERAL);
 
     // Techschurelisse Block
-    public static final Block TECHSCHURELISSE_BLOCK = registerNewBlock("techschurelisse_block", new TestingBlock(FabricBlockSettings.of(Material.METAL)
-                    .hardness(7.0f).
+    public static final Block TECHSCHURELISSE_BLOCK = registerNewBlock("techschurelisse_block", Rarity.COMMON, new TestingBlock(FabricBlockSettings.of(Material.METAL)
+                    .hardness(6.5f).
                     resistance(18.0f).
                     requiresTool().
                     sounds(BlockSoundGroup.METAL)),
             Pandaemonium.ITEM_GROUP_GENERAL);
 
     // Raw Techschurelisse Block
-    public static final Block RAW_TECHSCHURELISSE_BLOCK = registerNewBlock("raw_techschurelisse_block", new TestingBlock(FabricBlockSettings.of(Material.METAL)
-                    .hardness(6.2f).
+    public static final Block RAW_TECHSCHURELISSE_BLOCK = registerNewBlock("raw_techschurelisse_block", Rarity.COMMON, new TestingBlock(FabricBlockSettings.of(Material.METAL)
+                    .hardness(5.7f).
                     resistance(17.0f).
                     requiresTool().
                     sounds(BlockSoundGroup.STONE)),
             Pandaemonium.ITEM_GROUP_GENERAL);
 
     // Easy block registering
-    private static <T extends Block> T registerNewBlock(String name, T block, ItemGroup itemGroup) {
+    private static <T extends Block> T registerNewBlock(String name, Rarity rarity, T block, ItemGroup itemGroup) {
         Registry.register(Registry.BLOCK, new Identifier(Pandaemonium.MODID, name), block);
+
         // Register to an item group if specified
         if (itemGroup != null) {
             Registry.register(Registry.ITEM,
                     new Identifier(Pandaemonium.MODID, name),
-                    new BlockItem(block, new Item.Settings().group(itemGroup)));
+                    new BlockItem(block, new Item.Settings().group(itemGroup).rarity(rarity)));
         }
         // Register item to misc group if not specified
         else {
             Registry.register(Registry.ITEM,
                     new Identifier(Pandaemonium.MODID, name),
-                    new BlockItem(block, new Item.Settings().group(Pandaemonium.ITEM_GROUP_MISC)));
+                    new BlockItem(block, new Item.Settings().group(Pandaemonium.ITEM_GROUP_MISC).rarity(rarity)));
         }
+
         return block;
     }
 

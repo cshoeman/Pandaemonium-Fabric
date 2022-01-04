@@ -3,7 +3,7 @@
     Pandaemonium
 
     by cshoeman
-    Version 2022.01.03.02
+    Version 2022.01.04-01
     https://github.com/cshoeman/Pandaemonium-Fabric
 
     Pandaemonium.java
@@ -18,18 +18,13 @@
 package net.compii.pandaemonium;
 
 import net.compii.pandaemonium.block.ModBlocks;
-import net.compii.pandaemonium.block.TestingBlock;
 import net.compii.pandaemonium.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
 import net.minecraft.item.*;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -49,7 +44,7 @@ public class Pandaemonium implements ModInitializer {
 	// Universal Mod ID and name for easy changing if you want to steal and rebrand my mod :D
 	public static final String MODID = "pandaemonium";
 	public static final String MODNAME = "Pandaemonium";
-	public static final String MODVER = "2022.01.03.02";
+	public static final String MODVER = "2022.01.04-01";
 	public static final String MODREPO = "https://github.com/cshoeman/Pandaemonium-Fabric";
 
 	// Invoke the logger
@@ -70,6 +65,10 @@ public class Pandaemonium implements ModInitializer {
 	public static final ItemGroup ITEM_GROUP_MATS = FabricItemGroupBuilder.create(
 					new Identifier(MODID, "materials"))
 			.icon(() -> new ItemStack(ModItems.TECHSCHURELISSE_INGOT))
+			.build();
+	public static final ItemGroup ITEM_GROUP_COMBAT = FabricItemGroupBuilder.create(
+					new Identifier(MODID, "combat"))
+			.icon(() -> new ItemStack(ModItems.TECHSCHURELISSE_SWORD))
 			.build();
 
 	// The testing block

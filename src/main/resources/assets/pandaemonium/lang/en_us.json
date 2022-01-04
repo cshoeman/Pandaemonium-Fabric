@@ -5,10 +5,18 @@
   "block.pandaemonium.techschurelisse_ore": "Techschurelisse Ore",
   "item.pandaemonium.raw_techschurelisse": "Raw Techschurelisse",
   "item.pandaemonium.techschurelisse_ingot": "Techschurelisse Ingot",
+  "item.pandaemonium.techschurelisse_pickaxe": "Techschurelisse Pickaxe",
+  "item.pandaemonium.techschurelisse_sword": "Techschurelisse Sword",
+  "item.pandaemonium.techschurelisse_shovel": "Techschurelisse Shovel",
+  "item.pandaemonium.techschurelisse_axe": "Techschurelisse Axe",
+  "item.pandaemonium.techschurelisse_hoe": "Techschurelisse Hoe",
   "item.pandaemonium.effective_power_pickaxe": "effective. Power",
   "itemGroup.pandaemonium.general": "Pandaemonium: General",
   "itemGroup.pandaemonium.tools": "Pandaemonium: Tools",
   "itemGroup.pandaemonium.misc": "Pandaemonium: Misc",
   "itemGroup.pandaemonium.materials": "Pandaemonium: Materials",
-  "subtitles.pandaemonium.the_testing_block.break": "Test sound"
+  "itemGroup.pandaemonium.combat": "Pandaemonium: Combat",
+  "subtitles.pandaemonium.the_testing_block.break": "Test sound",
+  "advancements.pandaemonium.obtain_techschurelisse.title": "Failed to Load",
+  "advancements.pandaemonium.obtain_techschurelisse.description": "Obtain Techschurelisse"
 }

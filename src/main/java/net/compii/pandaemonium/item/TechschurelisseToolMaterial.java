@@ -1,29 +1,28 @@
 /*
 
     Pandaemonium
-    EffectivePowerTool.java
+    TechschurelisseToolMaterial.java
     The effective. Power tool
 
  */
 
-package net.compii.pandaemonium;
+package net.compii.pandaemonium.item;
 
-import net.compii.pandaemonium.block.ModBlocks;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class EffectivePowerTool implements ToolMaterial {
+public class TechschurelisseToolMaterial implements ToolMaterial {
 
-    public static final EffectivePowerTool EFFECTIVE_POWER_TOOL = new EffectivePowerTool();
+    public static final TechschurelisseToolMaterial TECHSCHURELISSE_TOOL_MATERIAL = new TechschurelisseToolMaterial();
 
     @Override
     public int getDurability() {
-        return 4763;
+        return 1922;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 9.5F;
+        return 9.0F;
     }
 
     @Override
@@ -33,17 +32,17 @@ public class EffectivePowerTool implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 5;
+        return 4;
     }
 
     @Override
     public int getEnchantability() {
-        return 30;
+        return 45;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModBlocks.THE_TESTING_BLOCK);
+        return Ingredient.ofItems(ModItems.TECHSCHURELISSE_INGOT);
     }
 
 
