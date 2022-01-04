@@ -29,6 +29,14 @@ public class ModItems {
                     .rarity(Rarity.EPIC)
     );
 
+    // Stickaxe
+    public static ToolItem STICKAXE = new CustomPickaxes(StickaxeMaterial.STICKAXE_MATERIAL,
+            1,
+            -1.0F,
+            new Item.Settings()
+                    .group(Pandaemonium.ITEM_GROUP_MISC)
+    );
+
     // TECHSCHURELISSE
 
     // Raw Techschurelisse
@@ -91,6 +99,8 @@ public class ModItems {
         registerNewItem("techschurelisse_hoe", TECHSCHURELISSE_HOE);
         // Register Techschurelisse Shovel
         registerNewItem("techschurelisse_shovel", TECHSCHURELISSE_SHOVEL);
+        // Register Stickaxe
+        registerNewItem("stickaxe", STICKAXE);
     }
 
 }

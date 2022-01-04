@@ -56,6 +56,14 @@ public class ModBlocks {
                     sounds(BlockSoundGroup.STONE)),
             Pandaemonium.ITEM_GROUP_GENERAL);
 
+    // Test Chest
+    public static final Block TEST_CHEST = registerNewBlock("test_chest", Rarity.UNCOMMON, new TestChest(FabricBlockSettings.of(Material.METAL)
+                    .hardness(1.0f).
+                    resistance(20.0f).
+                    requiresTool().
+                    sounds(BlockSoundGroup.METAL)),
+            Pandaemonium.ITEM_GROUP_GENERAL);
+
     // Easy block registering
     private static <T extends Block> T registerNewBlock(String name, Rarity rarity, T block, ItemGroup itemGroup) {
         Registry.register(Registry.BLOCK, new Identifier(Pandaemonium.MODID, name), block);

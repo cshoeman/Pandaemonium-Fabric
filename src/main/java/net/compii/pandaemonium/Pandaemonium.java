@@ -71,11 +71,6 @@ public class Pandaemonium implements ModInitializer {
 			.icon(() -> new ItemStack(ModItems.TECHSCHURELISSE_SWORD))
 			.build();
 
-	// The testing block
-    // public static final TestingBlock THE_TESTING_BLOCK = new TestingBlock(FabricBlockSettings.of(Material.WOOD).hardness(0.7f).resistance(2000.0f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK));
-	// The Effective Power Pickaxe
-    // public static ToolItem EFFECTIVE_POWER_PICKAXE = new CustomPickaxes(EffectivePowerTool.EFFECTIVE_POWER_TOOL, 10, -1.2F, new Item.Settings().group(Pandaemonium.ITEM_GROUP_TOOLS));
-
 	// Sound events
 	public static final Identifier TEST_SOUND = new Identifier(MODID, "block.the_testing_block.break");
 	public static SoundEvent TEST_SOUND_EVENT = new SoundEvent(TEST_SOUND);
@@ -90,6 +85,10 @@ public class Pandaemonium implements ModInitializer {
 			CountPlacementModifier.of(20), // How many veins to place in each chunk
 			SquarePlacementModifier.of(), // Horizontal spreading
 			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(66))); // Ore placement height
+
+
+
+
 
 	@Override
 	public void onInitialize() {

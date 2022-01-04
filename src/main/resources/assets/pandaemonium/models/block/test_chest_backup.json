@@ -1,0 +1,21 @@
+{   "parent": "block/block",
+  "textures": {
+    "bottom": "pandaemonium:block/test_chest",
+    "top": "pandaemonium:block/test_chest",
+    "side": "pandaemonium:block/test_chest",
+    "all": "pandaemonium:block/the_testing_block"
+  },
+  "elements": [
+    {   "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 4 ],
+      "faces": {
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "cullface": "down" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "cullface": "top" },
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "cullface": "north" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "cullface": "south" },
+        "west":  { "uv": [ 0, 0, 4, 16 ], "texture": "#all" },
+        "east":  { "uv": [ 0, 0, 4, 16 ], "texture": "#all" }
+      }
+    }
+  ]
+}
