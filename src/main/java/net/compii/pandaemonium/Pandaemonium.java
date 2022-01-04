@@ -3,7 +3,7 @@
     Pandaemonium
 
     by cshoeman
-    Version 0.2.0
+    Version 2022.01.03.02
     https://github.com/cshoeman/Pandaemonium-Fabric
 
     Pandaemonium.java
@@ -49,7 +49,7 @@ public class Pandaemonium implements ModInitializer {
 	// Universal Mod ID and name for easy changing if you want to steal and rebrand my mod :D
 	public static final String MODID = "pandaemonium";
 	public static final String MODNAME = "Pandaemonium";
-	public static final String MODVER = "0.2.0";
+	public static final String MODVER = "2022.01.03.02";
 	public static final String MODREPO = "https://github.com/cshoeman/Pandaemonium-Fabric";
 
 	// Invoke the logger
