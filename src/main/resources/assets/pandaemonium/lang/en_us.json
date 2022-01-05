@@ -4,6 +4,9 @@
   "block.pandaemonium.techschurelisse_block": "Techschurelisse Block",
   "block.pandaemonium.techschurelisse_ore": "Techschurelisse Ore",
   "block.pandaemonium.test_chest": "Test Chest",
+  "block.pandaemonium.dirt_slab": "Dirt Slab",
+  "block.pandaemonium.dirt_stairs": "Dirt Stairs",
+  "block.pandaemonium.etho_slab": "Etho Slab",
   "item.pandaemonium.raw_techschurelisse": "Raw Techschurelisse",
   "item.pandaemonium.techschurelisse_ingot": "Techschurelisse Ingot",
   "item.pandaemonium.techschurelisse_pickaxe": "Techschurelisse Pickaxe",
@@ -20,5 +23,7 @@
   "itemGroup.pandaemonium.combat": "Pandaemonium: Combat",
   "subtitles.pandaemonium.the_testing_block.break": "Test sound",
   "advancements.pandaemonium.obtain_techschurelisse.title": "Failed to Load",
-  "advancements.pandaemonium.obtain_techschurelisse.description": "Obtain Techschurelisse"
+  "advancements.pandaemonium.obtain_techschurelisse.description": "Obtain Techschurelisse",
+  "advancements.pandaemonium.dirt_slab.title": "I Waited 13 Years",
+  "advancements.pandaemonium.dirt_slab.description": "Procure a Dirt Slab"
 }

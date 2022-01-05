@@ -1,0 +1,37 @@
+{
+  "parent": "pandaemonium:root",
+  "display": {
+    "icon": {
+      "item": "pandaemonium:dirt_slab"
+    },
+    "title": {
+      "translate": "advancements.pandaemonium.dirt_slab.title"
+    },
+    "description": {
+      "translate": "advancements.pandaemonium.dirt_slab.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dirt_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pandaemonium:dirt_slab"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dirt_slab"
+    ]
+  ]
+}

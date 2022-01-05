@@ -32,6 +32,20 @@ public class ModBlocks {
             sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             Pandaemonium.ITEM_GROUP_GENERAL);
 
+    // Dirt Slab
+    public static final Block DIRT_SLAB = registerNewBlock("dirt_slab", Rarity.COMMON, new DirtSlab(FabricBlockSettings.of(Material.SOIL)
+                    .hardness(1.0f).
+                    resistance(1.0f).
+                    sounds(BlockSoundGroup.GRAVEL)),
+            Pandaemonium.ITEM_GROUP_GENERAL);
+
+    // Dirt Stairs
+    public static final Block DIRT_STAIRS = registerNewBlock("dirt_stairs", Rarity.COMMON, new DirtStairs(FabricBlockSettings.of(Material.SOIL)
+                    .hardness(1.0f).
+                    resistance(1.0f).
+                    sounds(BlockSoundGroup.GRAVEL)),
+            Pandaemonium.ITEM_GROUP_GENERAL);
+
     // Techschurelisse Ore
     public static final Block TECHSCHURELISSE_ORE = registerNewBlock("techschurelisse_ore", Rarity.COMMON, new TestingBlock(FabricBlockSettings.of(Material.STONE)
                     .hardness(4.5f).
@@ -57,12 +71,20 @@ public class ModBlocks {
             Pandaemonium.ITEM_GROUP_GENERAL);
 
     // Test Chest
-    public static final Block TEST_CHEST = registerNewBlock("test_chest", Rarity.UNCOMMON, new TestChest(FabricBlockSettings.of(Material.METAL)
+    public static final Block TEST_CHEST = registerNewBlock("test_chest", Rarity.COMMON, new TestChest(FabricBlockSettings.of(Material.METAL)
                     .hardness(1.0f).
                     resistance(20.0f).
                     requiresTool().
                     sounds(BlockSoundGroup.METAL)),
             Pandaemonium.ITEM_GROUP_GENERAL);
+
+    // Etho Slab
+    public static final Block ETHO_SLAB = registerNewBlock("etho_slab", Rarity.COMMON, new EthoSlab(FabricBlockSettings.of(Material.TNT)
+                    .hardness(1.0f).
+                    resistance(1.0f).
+                    breakInstantly().
+                    sounds(BlockSoundGroup.GRASS)),
+            Pandaemonium.ITEM_GROUP_MISC);
 
     // Easy block registering
     private static <T extends Block> T registerNewBlock(String name, Rarity rarity, T block, ItemGroup itemGroup) {

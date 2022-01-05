@@ -76,7 +76,7 @@ public class ModItems {
             8,
             -2.0F,
             new Item.Settings()
-                    .group(Pandaemonium.ITEM_GROUP_COMBAT));
+                    .group(Pandaemonium.ITEM_GROUP_TOOLS));
 
     private static void registerNewItem(String name, Item item) {
         Registry.register(Registry.ITEM, new Identifier(Pandaemonium.MODID, name), item);

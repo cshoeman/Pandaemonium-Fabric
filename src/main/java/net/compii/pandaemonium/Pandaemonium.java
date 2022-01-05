@@ -3,7 +3,7 @@
     Pandaemonium
 
     by cshoeman
-    Version 2022.01.04-01
+    Version 2022.01.05
     https://github.com/cshoeman/Pandaemonium-Fabric
 
     Pandaemonium.java
@@ -44,7 +44,7 @@ public class Pandaemonium implements ModInitializer {
 	// Universal Mod ID and name for easy changing if you want to steal and rebrand my mod :D
 	public static final String MODID = "pandaemonium";
 	public static final String MODNAME = "Pandaemonium";
-	public static final String MODVER = "2022.01.04-01";
+	public static final String MODVER = "2022.01.05";
 	public static final String MODREPO = "https://github.com/cshoeman/Pandaemonium-Fabric";
 
 	// Invoke the logger
@@ -78,13 +78,13 @@ public class Pandaemonium implements ModInitializer {
 	// Ore configured feature to generate the testing block for testing purposes
 	private static ConfiguredFeature<?, ?> OVERWORLD_TESTING_ORE_CONFIGURED_FEATURE = Feature.ORE
 			.configure(new OreFeatureConfig(
-					OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+					OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
 					ModBlocks.TECHSCHURELISSE_ORE.getDefaultState(),
-					9)); // Setting vein size to 32 for testing
+					9)); // Vein size
 	public static PlacedFeature OVERWORLD_TESTING_ORE_PLACED_FEATURE = OVERWORLD_TESTING_ORE_CONFIGURED_FEATURE.withPlacement(
-			CountPlacementModifier.of(20), // How many veins to place in each chunk
+			CountPlacementModifier.of(32), // How many veins to place in each chunk (high number to test)
 			SquarePlacementModifier.of(), // Horizontal spreading
-			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(66))); // Ore placement height
+			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(14))); // Ore placement height (center, I think?)
 
 
 

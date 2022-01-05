@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pandaemonium:block/dirt_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/dirt"
+    },
+    "type=top": {
+      "model": "pandaemonium:block/dirt_slab_top"
+    }
+  }
+}

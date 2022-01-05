@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "pandaemonium:etho_slab",
+    "count": 6
+  }
+}

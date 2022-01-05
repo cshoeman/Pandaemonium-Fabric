@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pandaemonium:block/etho_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/tnt"
+    },
+    "type=top": {
+      "model": "pandaemonium:block/etho_slab_top"
+    }
+  }
+}
