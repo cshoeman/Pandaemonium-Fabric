@@ -13,16 +13,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -64,7 +60,7 @@ public class EthoSlab extends SlabBlock {
         super.onBreak(world, pos, state, player);
     }
 
-    /*
+
     @Override
     public void onDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
         if (world.isClient) {
@@ -74,7 +70,7 @@ public class EthoSlab extends SlabBlock {
         int i = tntEntity.getFuse();
         tntEntity.setFuse((short)(world.random.nextInt(i / 4) + i / 8));
         world.spawnEntity(tntEntity);
-    } */
+    }
 
     public static void primeTnt(World world, BlockPos pos) {
         EthoSlab.primeTnt(world, pos, null);

@@ -3,7 +3,7 @@
     Pandaemonium
 
     by cshoeman
-    Version 2022.01.05
+    Version 2022.01.06
     https://github.com/cshoeman/Pandaemonium-Fabric
 
     Pandaemonium.java
@@ -19,13 +19,13 @@ package net.compii.pandaemonium;
 
 import net.compii.pandaemonium.block.ModBlocks;
 import net.compii.pandaemonium.item.ModItems;
+import net.compii.pandaemonium.sound.CustomSoundEvents;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -44,7 +44,7 @@ public class Pandaemonium implements ModInitializer {
 	// Universal Mod ID and name for easy changing if you want to steal and rebrand my mod :D
 	public static final String MODID = "pandaemonium";
 	public static final String MODNAME = "Pandaemonium";
-	public static final String MODVER = "2022.01.05";
+	public static final String MODVER = "2022.01.06";
 	public static final String MODREPO = "https://github.com/cshoeman/Pandaemonium-Fabric";
 
 	// Invoke the logger
@@ -71,18 +71,16 @@ public class Pandaemonium implements ModInitializer {
 			.icon(() -> new ItemStack(ModItems.TECHSCHURELISSE_SWORD))
 			.build();
 
-	// Sound events
-	public static final Identifier TEST_SOUND = new Identifier(MODID, "block.the_testing_block.break");
-	public static SoundEvent TEST_SOUND_EVENT = new SoundEvent(TEST_SOUND);
+
 
 	// Ore configured feature to generate the testing block for testing purposes
 	private static ConfiguredFeature<?, ?> OVERWORLD_TESTING_ORE_CONFIGURED_FEATURE = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
 					ModBlocks.TECHSCHURELISSE_ORE.getDefaultState(),
-					9)); // Vein size
+					3)); // Vein size
 	public static PlacedFeature OVERWORLD_TESTING_ORE_PLACED_FEATURE = OVERWORLD_TESTING_ORE_CONFIGURED_FEATURE.withPlacement(
-			CountPlacementModifier.of(32), // How many veins to place in each chunk (high number to test)
+			CountPlacementModifier.of(2), // How many veins to place in each chunk
 			SquarePlacementModifier.of(), // Horizontal spreading
 			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(14))); // Ore placement height (center, I think?)
 
@@ -103,7 +101,7 @@ public class Pandaemonium implements ModInitializer {
 		ModItems.register();
 
 		// Register the test sound
-		Registry.register(Registry.SOUND_EVENT, Pandaemonium.TEST_SOUND, TEST_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, CustomSoundEvents.SOUND_BLOCK_TESTING_BLOCK_BREAK, CustomSoundEvents.BLOCK_TESTING_BLOCK_BREAK);
 
 		// Register the testing ore generation
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,

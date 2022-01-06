@@ -10,6 +10,7 @@
 
 package net.compii.pandaemonium.block;
 
+import net.compii.pandaemonium.sound.CustomBlockSoundGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.Material;
@@ -25,11 +26,11 @@ import net.compii.pandaemonium.Pandaemonium;
 public class ModBlocks {
 
     // The Testing Block
-    public static final Block THE_TESTING_BLOCK = registerNewBlock("the_testing_block", Rarity.EPIC, new TestingBlock(FabricBlockSettings.of(Material.WOOD)
+    public static final Block THE_TESTING_BLOCK = registerNewBlock("the_testing_block", Rarity.EPIC, new TestingBlock(FabricBlockSettings.of(Material.METAL)
             .hardness(5.5f).
             resistance(2000.0f).
             requiresTool().
-            sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+            sounds(CustomBlockSoundGroup.TESTING_BLOCKS)),
             Pandaemonium.ITEM_GROUP_GENERAL);
 
     // Dirt Slab
